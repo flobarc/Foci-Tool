@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+{% block uploadbutton %}
+<!-- upload button -->
+    <div class="upload-container">
+        <form action="/upload" method="POST" enctype="multipart/form-data" id="upload-form">
+            <label for="file" class="upload-button">
+                            <i class="fa-solid fa-file-arrow-up custom-upload-icon"></i>
+            .docx</label>
+            <input type="file" name="file" id="file" accept=".docx, application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            <input type="submit" style="display: none;">
+        </form>
+    </div>
+<div class="description">
+    <div><i class="fa-solid fa-1"></i>. Convert your .pdf study to .docx using free online tools</div>
+    <div><i class="fa-solid fa-2"></i>. The software iterates through all tables<br> looking for coordinates<br> and pastes them in a .txt file</div>
+    <div><i class="fa-solid fa-3"></i>. When encountering problems <br>regarding the file formatting - <br>try saving the .docx file into .docx again using word<br>(more <a href="/about">information</a>)
+</div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<!-- java script code -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='fileUpload.js') }}"></script>
+    <script src="{{ url_for('static', filename='themeToggle.js') }}"></script>
+{% endblock %}

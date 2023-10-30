@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- internal css code -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>{% block title %}Upload{% endblock %}</title>
+</head>
+<body>
+
+<!-- top navbar -->
+<div class="navbar2">
+    <div class="divider"></div>
+</div>
+
+<!-- foci tool logo -->
+<div class="logo"><i class="fa-solid fa-brain"></i>Foci Tool</div>
+
+<!-- actual navbar -->
+<div class="navbar">
+    <div class="nav-links">
+        <a href="/upload"><i class="fas fa-cloud-upload-alt"></i>Upload</a>
+        <a href="/about"><i class="fas fa-info-circle"></i>About</a>
+    </div>
+    <div class="github">
+        <a href="https://github.com/flobarc"><i class="fa-brands fa-github"></i></a>
+    </div>
+</div>
+
+<!-- toggle for light / dark theme -->
+<div>
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="theme" for="chk">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+    </label>
+</div>
+
+{% block uploadbutton %}{% endblock %}
+
+<!-- bottom navbar -->
+<div class="navbar3">
+    <div class="divider2"></div>
+</div>
+
+{% block javascript %}{% endblock %}
+</body>
+</html>

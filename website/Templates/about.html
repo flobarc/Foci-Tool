@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %}About{% endblock %}
+
+
+{% block javascript %}
+<!-- java script code -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='fileUpload.js') }}"></script>
+    <script src="{{ url_for('static', filename='themeToggle.js') }}"></script>
+{% endblock %}
